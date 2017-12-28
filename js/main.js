@@ -1,8 +1,12 @@
-var xhttp = new XMLHttpRequest();
-xhttp.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
+var btn = document.getElementById("btn");
 
-xhttp.onload = function() {
-  var data = JSON.parse(xhttp.responseText);
-  console.log(data[0]);
-};
-xhttp.send();
+btn.addEventListener("click", function() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
+
+  xhttp.onload = function() {
+    var data = JSON.parse(xhttp.responseText);
+    console.log(data[0]);
+  };
+  xhttp.send();
+})
